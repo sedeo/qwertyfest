@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/43523a0e/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/914b136a/solarized_light.css" rel="stylesheet">
+<link href="./assets/73eb1f57/style.css" rel="stylesheet">
+<script src="./assets/d8180255/jquery.js"></script>
+<script src="./assets/43523a0e/js/bootstrap.js"></script>
+<script src="./assets/8557bc2d/jssearch.js"></script>    <title>Guía del proyecto</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w34" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w34-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Guía del proyecto</a></div><div id="w34-collapse" class="collapse navbar-collapse"><ul id="w35" class="navbar-nav nav"><li><a href="./api/index.html">Class reference</a></li>
+<li><a href="./README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-24" data-toggle="collapse" data-parent="#navigation">Descripción general <b class="caret"></b></a><div id="navigation-24" class="submenu panel-collapse collapse"><a class="list-group-item" href="./descripcion.html#funcionalidad-principal-de-la-aplicacion">Funcionalidad principal de la aplicación</a>
+<a class="list-group-item" href="./descripcion.html#objetivos-generales">Objetivos generales</a>
+<a class="list-group-item" href="./descripcion.html#url-del-repositorio">URL del repositorio</a>
+<a class="list-group-item" href="./descripcion.html#url-de-la-documentacion">URL de la documentación</a></div>
+<a class="list-group-item" href="#navigation-25" data-toggle="collapse" data-parent="#navigation">Instrucciones de instalación y despliegue <b class="caret"></b></a><div id="navigation-25" class="submenu panel-collapse collapse"><a class="list-group-item" href="./instalacion.html#en-local">En local</a>
+<a class="list-group-item" href="./instalacion.html#en-la-nube">En la nube</a></div>
+<a class="list-group-item" href="#navigation-26" data-toggle="collapse" data-parent="#navigation">Catálogo de requisitos <b class="caret"></b></a><div id="navigation-26" class="submenu panel-collapse collapse"><a class="list-group-item" href="./requisitos.html#cuadro-resumen">Cuadro resumen</a></div>
+<a class="list-group-item" href="#navigation-27" data-toggle="collapse" data-parent="#navigation">Manual de usuario <b class="caret"></b></a><div id="navigation-27" class="submenu panel-collapse collapse"><a class="list-group-item" href="./manual.html">Manual de usuario</a></div>
+<a class="list-group-item" href="#navigation-28" data-toggle="collapse" data-parent="#navigation">Decisiones adoptadas <b class="caret"></b></a><div id="navigation-28" class="submenu panel-collapse collapse"><a class="list-group-item" href="./decisiones.html">Decisiones adoptadas</a></div>
+<a class="list-group-item" href="#navigation-29" data-toggle="collapse" data-parent="#navigation">Dificultades encontradas <b class="caret"></b></a><div id="navigation-29" class="submenu panel-collapse collapse"><a class="list-group-item" href="./dificultades.html">Dificultades encontradas</a></div>
+<a class="list-group-item" href="#navigation-30" data-toggle="collapse" data-parent="#navigation">Diagramas <b class="caret"></b></a><div id="navigation-30" class="submenu panel-collapse collapse"><a class="list-group-item" href="./diagramas.html#diagramas-de-clases">Diagramas de clases</a>
+<a class="list-group-item" href="./diagramas.html#diagramas-de-estructura-logica-de-datos">Diagramas de estructura lógica de datos</a></div>
+<a class="list-group-item" href="#navigation-31" data-toggle="collapse" data-parent="#navigation">Glosario de términos <b class="caret"></b></a><div id="navigation-31" class="submenu panel-collapse collapse"><a class="list-group-item" href="./glosario.html">Glosario de términos</a></div>
+<a class="list-group-item" href="#navigation-32" data-toggle="collapse" data-parent="#navigation">Conclusiones <b class="caret"></b></a><div id="navigation-32" class="submenu panel-collapse collapse"><a class="list-group-item" href="./conclusiones.html">Conclusiones</a></div>
+<a class="list-group-item" href="#navigation-33" data-toggle="collapse" data-parent="#navigation">Anexos <b class="caret"></b></a><div id="navigation-33" class="submenu panel-collapse collapse"><a class="list-group-item" href="./anexos.html">Anexos</a></div></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Catálogo de requisitos <span id="catalogo-de-requisitos"></span><a href="#catalogo-de-requisitos" class="hashlink">&para;</a></h1><table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R01</strong>     </th><th align="left"><strong>Registro de usuarios</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Se mostrara un formulario al usuario para poder registrarse a la aplicación</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/1">1</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R02</strong>     </th><th align="left"><strong>Correo de verificación</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Se mandara un correo de verificación al usuario cuando termine su registro.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/2">2</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R03</strong>     </th><th align="left"><strong>Inicio de sesión</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Se mostrara un formulario al usuario para poder iniciar sesión con su cuenta.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/3">3</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R04</strong>     </th><th align="left"><strong>Modo invitado</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá entrar a la aplicación sin necesidad de logearse, pero tendrá limitaciones, como por ejemplo, no podrá usar la lista de amigos, ni podrá crear salas, solo podrá unirse a ellas.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Media</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/4">4</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R05</strong>     </th><th align="left"><strong>Recordar contraseña</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá decidir si querrá que se recuerde su contraseña la próxima vez que entre a la aplicación.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/5">5</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R06</strong>     </th><th align="left"><strong>Cerrar sesión</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Habrá un botón en la aplicación para cerrar la sesión de un usuario que ya estuviese logeado.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/6">6</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R07</strong>     </th><th align="left"><strong>Modificar usuario</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Se mostrara un formulario al usuario si desease cambiar su nombre de usuario, o si quisiese dar mas información, como su domicilio, su fecha de cumpleaños o su numero de teléfono.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/7">7</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R08</strong>     </th><th align="left"><strong>Cambiar contraseña</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Se mostrara un formulario al usuario pidiendo su contraseña antigua y luego la contraseña nueva, esta acción mandara un correo de verificación.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/8">8</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R09</strong>     </th><th align="left"><strong>Perfil público</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Otros usuarios pueden acceder al perfil público de otro usuario, este perfil mostrara toda la información que el usuario haya querido mostrar.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/9">9</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R10</strong>     </th><th align="left"><strong>Crear sala</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Se mostrara un formulario al usuario indicando la información necesaria para crear una sala, una vez creada, este usuario se vuelve el propietario de la sala y tendrá acceso a otras opciones como expulsar a otros usuarios de dicha sala.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/10">10</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R11</strong>     </th><th align="left"><strong>Modificar sala</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">El usuario propietario de la sala podrá modificar información de la sala.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/11">11</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R12</strong>     </th><th align="left"><strong>Unirse a sala</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá unirse a una sala creada por otro usuario.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/12">12</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R13</strong>     </th><th align="left"><strong>Chat en vivo</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Los usuarios que estén dentro de una sala tendrán a su disposición un chat público para poder hablar.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Difícil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v3</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/13">13</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R14</strong>     </th><th align="left"><strong>Expulsar usuario</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">El usuario propietario de la sala podrá expulsar a un usuario de la sala.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v2</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/14">14</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R15</strong>     </th><th align="left"><strong>Crear administrador</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">El usuario administrador de la aplicación tiene acceso a la creación de cuentas de administración, esta acción mostrara un formulario con la información a implementar.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v2</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/15">15</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R16</strong>     </th><th align="left"><strong>Reportar usuario</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá reportar a otro usuario, se le mostrara un formulario en el que indicara el motivo del informe y una breve descripción.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/16">16</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R17</strong>     </th><th align="left"><strong>Listado de informes</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">El usuario administrador tiene acceso a un listado de todos los informes que se hayan creado para su gestión.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/17">17</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R18</strong>     </th><th align="left"><strong>Ver informes de usuarios</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">El usuario administrador podrá acceder al informe de un usuario, se mostrara el motivo del informe y la descripción.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/18">18</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R19</strong>     </th><th align="left"><strong>Banear usuario</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">El usuario administrador podrá prohibir el acceso a la aplicación a un usuario durante un periodo de tiempo o permanentemente.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Media</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/19">19</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R20</strong>     </th><th align="left"><strong>Listado de amigos</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario tendrá acceso a una lista donde se mostrara los usuarios que ha añadido como amigo tanto como a los usuarios que le han añadido como amigo siempre que el usuario haya aceptado la invitación.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v2</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/20">20</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R21</strong>     </th><th align="left"><strong>Añadir amigo</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá añadir a un usuario a su lista de amigos, se mostrara un formulario pidiendo el nombre de usuario y un breve mensaje.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v2</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/21">21</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R22</strong>     </th><th align="left"><strong>Eliminar amigo</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá eliminar a un usuario de su lista de amigos, cuando un usuario elimina a un usuario de su lista de amigos, el otro usuario no podrá ver a ese usuario en su propia lista.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v2</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/22">22</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R23</strong>     </th><th align="left"><strong>Lista de invitaciones</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">El usuario tendrá acceso a una lista de invitaciones de amistad, este podrá ver quien le añadió y el mensaje adjunto.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v2</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/23">23</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R24</strong>     </th><th align="left"><strong>Chat privado</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá iniciar un chat privado con un usuario que este en su lista de amigos.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Difícil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v3</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/24">24</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R25</strong>     </th><th align="left"><strong>Invitar amigo</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario propietario de una sala podrá invitar a usuarios que este en su lista de amigos a la sala.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Media</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v2</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/25">25</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R26</strong>     </th><th align="left"><strong>Uso de cuenta de Steam</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá iniciar sesión en la aplicación con su cuenta de Steam.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Opcional</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Media</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v3</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/26">26</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R27</strong>     </th><th align="left"><strong>Información usuarios</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">La aplicación guardara información sobre los usuarios: Un numero identificador, su nombre de usuario, su dirección, fecha de nacimiento, teléfono, si es un invitado y si es un administrador.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Información</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/27">27</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R28</strong>     </th><th align="left"><strong>Información salas</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">La aplicación guardara información sobre las salas: Un numero identificador, el usuario propietario, numero de usuarios máximo, descripción breve, fecha de creación y usuarios dentro de la sala.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Información</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/28">28</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R29</strong>     </th><th align="left"><strong>Información amigos</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">La aplicación guardara información sobre los amigos: El usuario que añadió y el usuario añadido</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Información</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v2</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/29">29</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R30</strong>     </th><th align="left"><strong>Información invitaciones</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">La aplicación guardara información sobre las invitaciones: Un numero identificador, el usuario que mando la invitación, un mensaje breve, la fecha de creación de la invitación y el usuario que recibió la invitación.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Información</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v2</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/30">30</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R31</strong>     </th><th align="left"><strong>Información informes</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">La aplicación guardara información sobre los informes: Un numero identificador, el usuario que recibe el informe, el motivo del informe, la descripción del informe, el usuario que mandó el informe y la fecha de creación del informe.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Importante</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Información</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/31">31</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R32</strong>     </th><th align="left"><strong>Requisitos e incidencias</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Requisitos perfectamente definidos y convertidos en incidencias de GitHub.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/32">32</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R33</strong>     </th><th align="left"><strong>Código fuente</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Código fuente publicado en GitHub</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/33">33</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R34</strong>     </th><th align="left"><strong>Estilo de código</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Estilo de código según las normas internas de Yii2 para el código y para las plantillas de las vistas.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/34">34</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R35</strong>     </th><th align="left"><strong>Lanzamientos</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Tres lanzamientos etiquetados en el repositorio como v1, v2 y v3</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/35">35</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R36</strong>     </th><th align="left"><strong>README</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">README.md en el directorio raíz con la descripción principal del proyecto.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/36">36</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R37</strong>     </th><th align="left"><strong>Documentación generada</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Documentación generada con yii2-apidoc y publicada en GitHub Pages a partir del contenido del directorio /docs</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/37">37</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R38</strong>     </th><th align="left"><strong>Administración incidencias</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Administración y resolución de todas las incidencias notificadas en GitHub.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/38">38</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R39</strong>     </th><th align="left"><strong>Usar etiquetas e hitos</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Etiquetas: mínimo, importante, opcional. Hitos: v1, v2, v3.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/39">39</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R40</strong>     </th><th align="left"><strong>Waffle</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Usar Waffle para la gestión general del proyecto.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/40">40</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R41</strong>     </th><th align="left"><strong>Validación</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Validación de los campos de los formularios.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/41">41</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R42</strong>     </th><th align="left"><strong>Gestión de ventanas</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Gestión de la apariencia de las ventanas. Creación de nuevas ventanas y comunicación entre ventanas.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/42">42</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R43</strong>     </th><th align="left"><strong>Manejo de eventos</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Interactividad a través de mecanismos de manejo de eventos intuitivos y eficaces.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/43">43</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R44</strong>     </th><th align="left"><strong>DOM</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Uso y manipulación de las características del modelo de objetos del documento (DOM).</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/44">44</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R45</strong>     </th><th align="left"><strong>Mecanismos de almacenamiento</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Uso de mecanismos de almacenaimento en el lado del cliente.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/45">45</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R46</strong>     </th><th align="left"><strong>JQUERY</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Uso de la librería JQUERY.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/46">46</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R47</strong>     </th><th align="left"><strong>Plugins</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Incluir al menos un plugin no trabajado en clase.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/47">47</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R48</strong>     </th><th align="left"><strong>Comunicación asíncrona</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Utilización de mecanismos de comunicación asíncrona: AJAX.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/48">48</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R49</strong>     </th><th align="left"><strong>PHP 7.1</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Uso de PHP 7.1.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/49">49</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R50</strong>     </th><th align="left"><strong>Yii Framework</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Uso de Yii Framework versión 2.0.10 ó superior.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/50">50</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R51</strong>     </th><th align="left"><strong>PostgreSQL</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Uso de PostgreSQL versión 9.6 ó superior.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/51">51</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R52</strong>     </th><th align="left"><strong>Heroku</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Despliegue de aplicación en la plataforma Heroku.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/52">52</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R53</strong>     </th><th align="left"><strong>Codeception</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Pruebas funcionales con Codeception.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/53">53</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R54</strong>     </th><th align="left"><strong>Code Climate</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Estilo y mantenibilidad del código fuente validados por Code Climate.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/54">54</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R55</strong>     </th><th align="left"><strong>Escalabilidad</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">La aplicación ha de ser escalable.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/55">55</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R56</strong>     </th><th align="left"><strong>Etiquetas HTML5</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Para estructurar el contenido se utilizarán las etiquetas semánticas de HTML5.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/56">56</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R57</strong>     </th><th align="left"><strong>CSS</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Todo lo relacionado con la presentación se trabajara mediante CSS.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/57">57</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R58</strong>     </th><th align="left"><strong>Flexibilidad</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">El diseño será flexible.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/58">58</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R59</strong>     </th><th align="left"><strong>Microdatos</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Uso de microdatos.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/59">59</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R60</strong>     </th><th align="left"><strong>Resolución</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Implementar el diseño para resoluciones grandes y pequeñas.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/60">60</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R61</strong>     </th><th align="left"><strong>Despliegue host</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Realizar el despliegue en un Host: Utilizando algún servicio gratuito de hosting e instalar / configurar o solicitar el software necesario para desplegar el proyecto.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/61">61</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R62</strong>     </th><th align="left"><strong>Despliegue servidor local</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Realizar un despliegue en un servidor local usando y configurando tres máquinas virtuales. Crear un servicio de nombres de dominio. Gestionar y administrar el servidor Apache tanto en Windows como Linux.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Técnico</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/62">62</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R63</strong>     </th><th align="left"><strong>Crear grupo</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá crear un grupo, un grupo es en esencia un foro, el usuario que creó el grupo se convierte en propietario del dicho, y podrá administrar los temas que se hablan en el grupo. Cuando un grupo es creado, se creara unos temas por defecto como “General” y “Reglas”.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/63">63</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R64</strong>     </th><th align="left"><strong>Unirse a un grupo</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario tendrá acceso a un formulario donde podrá buscar un grupo y unirse a él, cuando esto ocurre, le llega una notificación al usuario propietario para aceptar o no al usuario.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/64">64</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R65</strong>     </th><th align="left"><strong>Crear un tema</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario que este en un grupo podrá crear un tema dentro de dicho grupo.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/65">65</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R66</strong>     </th><th align="left"><strong>Comentar un tema</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá comentar en un tema dentro de un grupo.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/66">66</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R67</strong>     </th><th align="left"><strong>Responder a un comentario</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá responder un comentario.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/67">67</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R68</strong>     </th><th align="left"><strong>Mover un tema</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">El usuario propietario podrá mover un tema de sitio dependiendo de si es importante, algo así como las chinchetas para marcar.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/68">68</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R69</strong>     </th><th align="left"><strong>Borrar un tema</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá borrar un tema creado por si mismo (o el propietario puede borrar cualquier tema, aunque no sea suyo) si este esta libre de comentarios.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/69">69</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R70</strong>     </th><th align="left"><strong>Modificar tema</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Un usuario podrá modificar un tema creado por si mismo (o el propietario puede modificarlo aunque no sea suyo), si este es el caso, en la entradilla del tema se verá que esta editado y por quien fue editado.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/70">70</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R71</strong>     </th><th align="left"><strong>Ver temas</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">Los usuarios de un grupo especifico, podrán ver todos los temas que estén creados en dicho grupo.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/71">71</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R72</strong>     </th><th align="left"><strong>Cerrar un tema</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">El usuario propietario podrá bloquear un tema para que ya no se pueda comentar mas en él.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Funcional</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/72">72</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R73</strong>     </th><th align="left"><strong>Información grupos</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">La aplicación guardara información sobre los grupos: Un numero identificador, un nombre y el usuario propietario.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Información</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/73">73</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R74</strong>     </th><th align="left"><strong>Información miembros</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">La aplicación guardara información sobre los miembros de un grupo: El grupo y el identificador del miembro.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Información</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/74">74</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R75</strong>     </th><th align="left"><strong>Información temas</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">La aplicación guardara información sobre los temas: Un numero identificador, el usuario que creó el tema, un título y una entradilla.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Información</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/75">75</a></td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th align="right"><strong>R76</strong>     </th><th align="left"><strong>Información comentarios</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="right"><strong>Descripción</strong> </td><td align="left">La aplicación guardara información sobre los comentarios: Un numero identificador, el identificador del tema, el identificador del usuario, y el texto del comentario.</td></tr>
+<tr><td align="right"><strong>Prioridad</strong>   </td><td align="left">Mínimo</td></tr>
+<tr><td align="right"><strong>Tipo</strong>        </td><td align="left">Información</td></tr>
+<tr><td align="right"><strong>Complejidad</strong> </td><td align="left">Fácil</td></tr>
+<tr><td align="right"><strong>Entrega</strong>     </td><td align="left">v1</td></tr>
+<tr><td align="right"><strong>Incidencia</strong>  </td><td align="left"><a href="https://github.com/sedeo/qwertyfest/issues/76">76</a></td></tr>
+</tbody>
+</table>
+<h2>Cuadro resumen <span id="cuadro-resumen"></span><a href="#cuadro-resumen" class="hashlink">&para;</a></h2><table class="table table-bordered table-striped">
+<thead>
+<tr><th align="left"><strong>Requisito</strong> </th><th align="center"><strong>Prioridad</strong> </th><th align="center"><strong>Tipo</strong> </th><th align="center"><strong>Complejidad</strong> </th><th align="center"><strong>Entrega</strong> </th><th align="center"><strong>Incidencia</strong></th></tr>
+</thead>
+<tbody>
+<tr><td align="left">(<strong>R01</strong>) Registro de usuarios </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/1">1</a></td></tr>
+<tr><td align="left">(<strong>R02</strong>) Correo de verificación </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/2">2</a></td></tr>
+<tr><td align="left">(<strong>R03</strong>) Inicio de sesión </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/3">3</a></td></tr>
+<tr><td align="left">(<strong>R04</strong>) Modo invitado </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Media </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/4">4</a></td></tr>
+<tr><td align="left">(<strong>R05</strong>) Recordar contraseña </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/5">5</a></td></tr>
+<tr><td align="left">(<strong>R06</strong>) Cerrar sesión </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/6">6</a></td></tr>
+<tr><td align="left">(<strong>R07</strong>) Modificar usuario </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/7">7</a></td></tr>
+<tr><td align="left">(<strong>R08</strong>) Cambiar contraseña </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/8">8</a></td></tr>
+<tr><td align="left">(<strong>R09</strong>) Perfil público </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/9">9</a></td></tr>
+<tr><td align="left">(<strong>R10</strong>) Crear sala </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/10">10</a></td></tr>
+<tr><td align="left">(<strong>R11</strong>) Modificar sala </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/11">11</a></td></tr>
+<tr><td align="left">(<strong>R12</strong>) Unirse a sala </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/12">12</a></td></tr>
+<tr><td align="left">(<strong>R13</strong>) Chat en vivo </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Difícil </td><td align="center">v3 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/13">13</a></td></tr>
+<tr><td align="left">(<strong>R14</strong>) Expulsar usuario </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v2 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/14">14</a></td></tr>
+<tr><td align="left">(<strong>R15</strong>) Crear administrador </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v2 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/15">15</a></td></tr>
+<tr><td align="left">(<strong>R16</strong>) Reportar usuario </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/16">16</a></td></tr>
+<tr><td align="left">(<strong>R17</strong>) Listado de informes </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/17">17</a></td></tr>
+<tr><td align="left">(<strong>R18</strong>) Ver informes de usuarios </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/18">18</a></td></tr>
+<tr><td align="left">(<strong>R19</strong>) Banear usuario </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Media </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/19">19</a></td></tr>
+<tr><td align="left">(<strong>R20</strong>) Listado de amigos </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v2 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/20">20</a></td></tr>
+<tr><td align="left">(<strong>R21</strong>) Añadir amigo </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v2 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/21">21</a></td></tr>
+<tr><td align="left">(<strong>R22</strong>) Eliminar amigo </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v2 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/22">22</a></td></tr>
+<tr><td align="left">(<strong>R23</strong>) Lista de invitaciones </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v2 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/23">23</a></td></tr>
+<tr><td align="left">(<strong>R24</strong>) Chat privado </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Difícil </td><td align="center">v3 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/24">24</a></td></tr>
+<tr><td align="left">(<strong>R25</strong>) Invitar amigo </td><td align="center">Importante </td><td align="center">Funcional </td><td align="center">Media </td><td align="center">v2 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/25">25</a></td></tr>
+<tr><td align="left">(<strong>R26</strong>) Uso de cuenta de Steam </td><td align="center">Opcional </td><td align="center">Funcional </td><td align="center">Media </td><td align="center">v3 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/26">26</a></td></tr>
+<tr><td align="left">(<strong>R27</strong>) Información usuarios </td><td align="center">Importante </td><td align="center">Información </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/27">27</a></td></tr>
+<tr><td align="left">(<strong>R28</strong>) Información salas </td><td align="center">Importante </td><td align="center">Información </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/28">28</a></td></tr>
+<tr><td align="left">(<strong>R29</strong>) Información amigos </td><td align="center">Importante </td><td align="center">Información </td><td align="center">Fácil </td><td align="center">v2 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/29">29</a></td></tr>
+<tr><td align="left">(<strong>R30</strong>) Información invitaciones </td><td align="center">Importante </td><td align="center">Información </td><td align="center">Fácil </td><td align="center">v2 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/30">30</a></td></tr>
+<tr><td align="left">(<strong>R31</strong>) Información informes </td><td align="center">Importante </td><td align="center">Información </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/31">31</a></td></tr>
+<tr><td align="left">(<strong>R32</strong>) Requisitos e incidencias </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/32">32</a></td></tr>
+<tr><td align="left">(<strong>R33</strong>) Código fuente </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/33">33</a></td></tr>
+<tr><td align="left">(<strong>R34</strong>) Estilo de código </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/34">34</a></td></tr>
+<tr><td align="left">(<strong>R35</strong>) Lanzamientos </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/35">35</a></td></tr>
+<tr><td align="left">(<strong>R36</strong>) README </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/36">36</a></td></tr>
+<tr><td align="left">(<strong>R37</strong>) Documentación generada </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/37">37</a></td></tr>
+<tr><td align="left">(<strong>R38</strong>) Administración incidencias </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/38">38</a></td></tr>
+<tr><td align="left">(<strong>R39</strong>) Usar etiquetas e hitos </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/39">39</a></td></tr>
+<tr><td align="left">(<strong>R40</strong>) Waffle </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/40">40</a></td></tr>
+<tr><td align="left">(<strong>R41</strong>) Validación </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/41">41</a></td></tr>
+<tr><td align="left">(<strong>R42</strong>) Gestión de ventanas </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/42">42</a></td></tr>
+<tr><td align="left">(<strong>R43</strong>) Manejo de eventos </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/43">43</a></td></tr>
+<tr><td align="left">(<strong>R44</strong>) DOM </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/44">44</a></td></tr>
+<tr><td align="left">(<strong>R45</strong>) Mecanismos de almacenamiento </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/45">45</a></td></tr>
+<tr><td align="left">(<strong>R46</strong>) JQUERY </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/46">46</a></td></tr>
+<tr><td align="left">(<strong>R47</strong>) Plugins </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/47">47</a></td></tr>
+<tr><td align="left">(<strong>R48</strong>) Comunicación asíncrona </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/48">48</a></td></tr>
+<tr><td align="left">(<strong>R49</strong>) PHP 7.1 </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/49">49</a></td></tr>
+<tr><td align="left">(<strong>R50</strong>) Yii Framework </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/50">50</a></td></tr>
+<tr><td align="left">(<strong>R51</strong>) PostgreSQL </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/51">51</a></td></tr>
+<tr><td align="left">(<strong>R52</strong>) Heroku </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/52">52</a></td></tr>
+<tr><td align="left">(<strong>R53</strong>) Codeception </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/53">53</a></td></tr>
+<tr><td align="left">(<strong>R54</strong>) Code Climate </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/54">54</a></td></tr>
+<tr><td align="left">(<strong>R55</strong>) Escalabilidad </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/55">55</a></td></tr>
+<tr><td align="left">(<strong>R56</strong>) Etiquetas HTML5 </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/56">56</a></td></tr>
+<tr><td align="left">(<strong>R57</strong>) CSS </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/57">57</a></td></tr>
+<tr><td align="left">(<strong>R58</strong>) Flexibilidad </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/58">58</a></td></tr>
+<tr><td align="left">(<strong>R59</strong>) Microdatos </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/59">59</a></td></tr>
+<tr><td align="left">(<strong>R60</strong>) Resolución </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/60">60</a></td></tr>
+<tr><td align="left">(<strong>R61</strong>) Despliegue host </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/61">61</a></td></tr>
+<tr><td align="left">(<strong>R62</strong>) Despliegue servidor local </td><td align="center">Mínimo </td><td align="center">Técnico </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/62">62</a></td></tr>
+<tr><td align="left">(<strong>R63</strong>) Crear grupo </td><td align="center">Mínimo </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/63">63</a></td></tr>
+<tr><td align="left">(<strong>R64</strong>) Unirse a un grupo </td><td align="center">Mínimo </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/64">64</a></td></tr>
+<tr><td align="left">(<strong>R65</strong>) Crear un tema </td><td align="center">Mínimo </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/65">65</a></td></tr>
+<tr><td align="left">(<strong>R66</strong>) Comentar un tema </td><td align="center">Mínimo </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/66">66</a></td></tr>
+<tr><td align="left">(<strong>R67</strong>) Responder a un comentario </td><td align="center">Mínimo </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/67">67</a></td></tr>
+<tr><td align="left">(<strong>R68</strong>) Mover un tema </td><td align="center">Mínimo </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/68">68</a></td></tr>
+<tr><td align="left">(<strong>R69</strong>) Borrar un tema </td><td align="center">Mínimo </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/69">69</a></td></tr>
+<tr><td align="left">(<strong>R70</strong>) Modificar tema </td><td align="center">Mínimo </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/70">70</a></td></tr>
+<tr><td align="left">(<strong>R71</strong>) Ver temas </td><td align="center">Mínimo </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/71">71</a></td></tr>
+<tr><td align="left">(<strong>R72</strong>) Cerrar un tema </td><td align="center">Mínimo </td><td align="center">Funcional </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/72">72</a></td></tr>
+<tr><td align="left">(<strong>R73</strong>) Información grupos </td><td align="center">Mínimo </td><td align="center">Información </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/73">73</a></td></tr>
+<tr><td align="left">(<strong>R74</strong>) Información miembros </td><td align="center">Mínimo </td><td align="center">Información </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/74">74</a></td></tr>
+<tr><td align="left">(<strong>R75</strong>) Información temas </td><td align="center">Mínimo </td><td align="center">Información </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/75">75</a></td></tr>
+<tr><td align="left">(<strong>R76</strong>) Información comentarios </td><td align="center">Mínimo </td><td align="center">Información </td><td align="center">Fácil </td><td align="center">v1 </td><td align="center"><a href="https://github.com/sedeo/qwertyfest/issues/76">76</a></td></tr>
+</tbody>
+</table>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Sun, 01 Apr 2018 09:52:04 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>
