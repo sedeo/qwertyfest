@@ -2,7 +2,9 @@
 
 namespace app\models;
 
-use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "usuarios".
@@ -39,11 +41,26 @@ class Usuarios extends \yii\db\ActiveRecord
     {
         return [
             [['nombre', 'password', 'created_at'], 'required'],
-            [['fec_nac', 'created_at'], 'safe'],
+            [['created_at'], 'safe'],
+            [['fec_nac'], 'date'],
             [['telefono'], 'number'],
             [['admin'], 'boolean'],
             [['nombre', 'password', 'auth_key', 'token_val', 'direccion'], 'string', 'max' => 255],
             [['token_val'], 'unique'],
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at'],
+                ],
+                // if you're using datetime instead of UNIX timestamp:
+                'value' => new Expression('current_timestamp(0)'),
+            ],
         ];
     }
 
@@ -54,12 +71,12 @@ class Usuarios extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'nombre' => 'Nombre',
-            'password' => 'Password',
+            'nombre' => 'Nombre de usuario',
+            'password' => 'Contraseña',
             'auth_key' => 'Auth Key',
             'token_val' => 'Token Val',
-            'direccion' => 'Direccion',
-            'fec_nac' => 'Fec Nac',
+            'direccion' => 'Dirección',
+            'fec_nac' => 'Fecha de nacimiento',
             'telefono' => 'Telefono',
             'admin' => 'Admin',
             'created_at' => 'Created At',
