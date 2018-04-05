@@ -50,6 +50,8 @@ $config = [
         'db' => $db,
         'formatter' => [
             'timeZone' => 'Europe/Madrid',
+            'datetimeFormat' => 'php:d-m-Y H:i:s',
+            'dateFormat' => 'php:d-m-Y',
         ],
         /*
         'urlManager' => [

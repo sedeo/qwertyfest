@@ -8,6 +8,8 @@ use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\Response;
+use yii\widgets\ActiveForm;
 
 /**
  * UsuariosController implements the CRUD actions for Usuarios model.
@@ -66,6 +68,11 @@ class UsuariosController extends Controller
     {
         $model = new Usuarios(['scenario' => Usuarios::ESCENARIO_CREATE]);
 
+        if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            return ActiveForm::validate($model);
+        }
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->goHome();
         }
@@ -87,6 +94,11 @@ class UsuariosController extends Controller
         $model = $this->findModel($id);
         $model->scenario = Usuarios::ESCENARIO_UPDATE;
         $model->password = '';
+
+        if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            return ActiveForm::validate($model);
+        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);

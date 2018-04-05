@@ -1,5 +1,7 @@
 <?php
 
+use yii\grid\ActionColumn;
+
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -15,28 +17,17 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Usuarios', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'layout' => '{items}{pager}',
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
             'nombre',
-            'password',
-            'auth_key',
-            'token_val',
-            //'direccion',
-            //'fec_nac',
-            //'telefono',
-            //'admin:boolean',
-            //'created_at',
-
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => ActionColumn::className(),
+                'header' => 'Acciones',
+                'template' => '{view}',
+            ]
         ],
     ]); ?>
 </div>

@@ -65,7 +65,7 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
             [['telefono'], 'number'],
             [['admin'], 'boolean'],
             [['nombre', 'password', 'auth_key', 'token_val', 'direccion'], 'string', 'max' => 255],
-            [['token_val'], 'unique'],
+            [['nombre', 'token_val'], 'unique'],
         ];
     }
 
@@ -97,9 +97,9 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
             'token_val' => 'Token Val',
             'direccion' => 'Dirección',
             'fec_nac' => 'Fecha de nacimiento',
-            'telefono' => 'Telefono',
+            'telefono' => 'Teléfono',
             'admin' => 'Admin',
-            'created_at' => 'Created At',
+            'created_at' => 'Fecha de creación',
         ];
     }
 
