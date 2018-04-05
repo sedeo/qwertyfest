@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS usuarios CASCADE;
 CREATE TABLE usuarios
 (
     id          bigserial       PRIMARY KEY
-  , nombre      varchar(255)    NOT NULL
+  , nombre      varchar(255)    NOT NULL UNIQUE
   , password    varchar(255)    NOT NULL
   , auth_key    varchar(255)
   , token_val   varchar(255)    UNIQUE

@@ -3,6 +3,10 @@ body {
     height: 100%;
 }
 
+.usuarios-view .detail-view th{
+    width: 20%;
+}
+
 .wrap {
     min-height: 100%;
     height: auto;
