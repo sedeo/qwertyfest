@@ -2,7 +2,9 @@
 
 namespace app\models;
 
-use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "salas".
@@ -39,6 +41,20 @@ class Salas extends \yii\db\ActiveRecord
             [['created_at'], 'safe'],
             [['descripcion'], 'string', 'max' => 255],
             [['propietario'], 'exist', 'skipOnError' => true, 'targetClass' => Usuarios::className(), 'targetAttribute' => ['propietario' => 'id']],
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at'],
+                ],
+                // if you're using datetime instead of UNIX timestamp:
+                'value' => new Expression('current_timestamp(0)'),
+            ],
         ];
     }
 

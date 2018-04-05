@@ -2,7 +2,9 @@
 
 namespace app\models;
 
-use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "informes".
@@ -40,6 +42,20 @@ class Informes extends \yii\db\ActiveRecord
             [['motivo', 'descripcion'], 'string', 'max' => 255],
             [['id_recibe'], 'exist', 'skipOnError' => true, 'targetClass' => Usuarios::className(), 'targetAttribute' => ['id_recibe' => 'id']],
             [['id_envia'], 'exist', 'skipOnError' => true, 'targetClass' => Usuarios::className(), 'targetAttribute' => ['id_envia' => 'id']],
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at'],
+                ],
+                // if you're using datetime instead of UNIX timestamp:
+                'value' => new Expression('current_timestamp(0)'),
+            ],
         ];
     }
 
