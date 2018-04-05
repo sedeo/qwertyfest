@@ -36,7 +36,7 @@ AppAsset::register($this);
         ],
     ]);
     $items = [
-        ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'Buscar usuarios', 'url' => ['/usuarios/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $items[] = ['label' => 'Iniciar sesión', 'url' => ['/site/login']];
