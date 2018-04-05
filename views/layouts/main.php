@@ -43,7 +43,7 @@ AppAsset::register($this);
         $items[] = ['label' => 'Registrarse', 'url' => ['usuarios/create']];
     } else {
         $items[] = [
-            'label' => Yii::$app->user->identity->username,
+            'label' => Yii::$app->user->identity->nombre,
             'items' => [
                 ['label' => 'Perfil público', 'url' => ['usuarios/view', 'id' => Yii::$app->user->id]],
                 '<li class="divider"></li>',
