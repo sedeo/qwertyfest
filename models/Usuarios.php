@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\db\Expression;
@@ -26,6 +27,10 @@ use yii\db\Expression;
  */
 class Usuarios extends \yii\db\ActiveRecord
 {
+    const ESCENARIO_CREATE = 'create';
+    const ESCENARIO_UPDATE = 'update';
+
+    public $conf_pass;
     /**
      * {@inheritdoc}
      */
@@ -34,13 +39,26 @@ class Usuarios extends \yii\db\ActiveRecord
         return 'usuarios';
     }
 
+    public function attributes()
+    {
+        return array_merge(parent::attributes(), ['conf_pass']);
+    }
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['nombre', 'password', 'created_at'], 'required'],
+            [['nombre'], 'required'],
+            [['password', 'conf_pass'], 'required', 'on' => self::ESCENARIO_CREATE],
+            [
+                 ['conf_pass'],
+                 'compare',
+                 'compareAttribute' => 'password',
+                 'skipOnEmpty' => false,
+                 'on' => [self::ESCENARIO_CREATE, self::ESCENARIO_UPDATE],
+             ],
             [['created_at'], 'safe'],
             [['fec_nac'], 'date'],
             [['telefono'], 'number'],
@@ -73,6 +91,7 @@ class Usuarios extends \yii\db\ActiveRecord
             'id' => 'ID',
             'nombre' => 'Nombre de usuario',
             'password' => 'Contraseña',
+            'conf_pass' => 'Confirmar contraseña',
             'auth_key' => 'Auth Key',
             'token_val' => 'Token Val',
             'direccion' => 'Dirección',
@@ -105,5 +124,28 @@ class Usuarios extends \yii\db\ActiveRecord
     public function getSalas()
     {
         return $this->hasMany(Salas::className(), ['propietario' => 'id'])->inverseOf('propietario0');
+    }
+
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            if ($insert) {
+                $this->auth_key = Yii::$app->security->generateRandomString();
+                $this->token_val = Yii::$app->security->generateRandomString();
+                if ($this->scenario === self::ESCENARIO_CREATE) {
+                    $this->password = Yii::$app->security->generatePasswordHash($this->password);
+                }
+            } else {
+                if ($this->scenario === self::ESCENARIO_UPDATE) {
+                    if ($this->password === '') {
+                        $this->password = $this->getOldAttribute('password');
+                    } else {
+                        $this->password = Yii::$app->security->generatePasswordHash($this->password);
+                    }
+                }
+            }
+            return true;
+        }
+        return false;
     }
 }
