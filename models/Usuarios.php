@@ -6,6 +6,8 @@ use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\db\Expression;
+use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\web\IdentityInterface;
 
 /**
@@ -13,6 +15,7 @@ use yii\web\IdentityInterface;
  *
  * @property int $id
  * @property string $nombre
+ * @property string $email
  * @property string $password
  * @property string $auth_key
  * @property string $token_val
@@ -51,7 +54,7 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['nombre'], 'required'],
+            [['nombre', 'email'], 'required'],
             [['password', 'conf_pass'], 'required', 'on' => self::ESCENARIO_CREATE],
             [
                  ['conf_pass'],
@@ -63,6 +66,7 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
             [['created_at'], 'safe'],
             [['fec_nac'], 'date'],
             [['telefono'], 'number'],
+            [['email'], 'email'],
             [['admin'], 'boolean'],
             [['nombre', 'password', 'auth_key', 'token_val', 'direccion'], 'string', 'max' => 255],
             [['nombre', 'token_val'], 'unique'],
@@ -91,6 +95,7 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
         return [
             'id' => 'ID',
             'nombre' => 'Nombre de usuario',
+            'email' => 'Email',
             'password' => 'Contraseña',
             'conf_pass' => 'Confirmar contraseña',
             'auth_key' => 'Auth Key',
@@ -125,6 +130,17 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
     public function getSalas()
     {
         return $this->hasMany(Salas::className(), ['propietario' => 'id'])->inverseOf('propietario0');
+    }
+
+    public function email()
+    {
+        $resultado = Yii::$app->mailer->compose()
+            ->setFrom(Yii::$app->params['adminEmail'])
+            ->setTo($this->email)
+            ->setSubject('Validación de tu cuenta de email')
+            ->setHtmlBody(Html::a('Haga click aqui para verificar su cuenta', Url::to(['usuarios/verificar', 'token_val' => $this->token_val], true)))
+            ->send();
+        Yii::$app->session->setFlash('info', 'Se le ha enviado un correo de verificación');
     }
 
     /**

@@ -16,6 +16,8 @@ use kartik\date\DatePicker;
 
     <?= $form->field($model, 'nombre', ['enableAjaxValidation' => true])->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'direccion')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'fec_nac')->widget(DatePicker::classname(), [

@@ -8,6 +8,7 @@ CREATE TABLE usuarios
 (
     id          bigserial       PRIMARY KEY
   , nombre      varchar(255)    NOT NULL UNIQUE
+  , email       varchar(255)    NOT NULL
   , password    varchar(255)    NOT NULL
   , auth_key    varchar(255)
   , token_val   varchar(255)    UNIQUE
