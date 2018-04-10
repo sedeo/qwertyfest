@@ -46,6 +46,18 @@ class UsuariosController extends Controller
         ]);
     }
 
+    public function actionVerificar($token_val)
+    {
+        $model = Usuarios::findOne(['token_val' => $token_val]);
+        if ($model === null) {
+            Yii::$app->session->setFlash('error', 'Usuario ya validado');
+        }
+        $model->token_val = null;
+        $model->save();
+        Yii::$app->session->setFlash('success', 'Usuario validado. Logeese');
+        return $this->redirect(['site/login']);
+    }
+
     /**
      * Displays a single Usuarios model.
      * @param int $id
@@ -74,6 +86,7 @@ class UsuariosController extends Controller
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->email();
             return $this->goHome();
         }
 

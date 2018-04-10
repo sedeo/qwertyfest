@@ -35,13 +35,12 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $items = [
-        ['label' => 'Buscar usuarios', 'url' => ['/usuarios/index']],
-    ];
+    $items = [];
     if (Yii::$app->user->isGuest) {
         $items[] = ['label' => 'Iniciar sesión', 'url' => ['/site/login']];
         $items[] = ['label' => 'Registrarse', 'url' => ['usuarios/create']];
     } else {
+        $items[] = ['label' => 'Buscar usuarios', 'url' => ['/usuarios/index']];
         $items[] = [
             'label' => Yii::$app->user->identity->nombre,
             'items' => [
