@@ -132,7 +132,25 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
         return $this->hasMany(Salas::className(), ['propietario' => 'id'])->inverseOf('propietario0');
     }
 
-    public function email()
+    public function emailPassword()
+    {
+        $resultado = Yii::$app->mailer->compose()
+            ->setFrom(Yii::$app->params['adminEmail'])
+            ->setTo($this->email)
+            ->setSubject('Cambio de contraseña')
+            ->setHtmlBody(Html::a(
+                'Haga click aqui para hacer efectivo el cambio de contraseña',
+                Url::to([
+                    'usuarios/cambiar-contrasena',
+                    'id' => $this->id,
+                    'password' => $password,
+                ], true)
+            ))
+            ->send();
+        Yii::$app->session->setFlash('info', 'Se le ha enviado un correo de verificación');
+    }
+
+    public function emailVerficar()
     {
         $resultado = Yii::$app->mailer->compose()
             ->setFrom(Yii::$app->params['adminEmail'])

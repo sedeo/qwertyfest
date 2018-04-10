@@ -58,6 +58,15 @@ class UsuariosController extends Controller
         return $this->redirect(['site/login']);
     }
 
+    public function actionCambiarPassword($id, $password)
+    {
+        $model = Usuarios::findOne(['password'] => $password);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->emailPassword();
+            return $this->redirect(['usuarios/view', 'id' => Yii::$app->user->id]);
+        }
+    }
+
     /**
      * Displays a single Usuarios model.
      * @param int $id
@@ -86,7 +95,7 @@ class UsuariosController extends Controller
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $model->email();
+            $model->emailVerificar();
             return $this->goHome();
         }
 
