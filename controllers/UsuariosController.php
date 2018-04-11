@@ -60,10 +60,13 @@ class UsuariosController extends Controller
 
     public function actionCambiarPassword($id, $password)
     {
-        $model = Usuarios::findOne(['password'] => $password);
-        if ($model->load(Yii::$app->request->post())) {
-            $model->emailPassword();
-            return $this->redirect(['usuarios/view', 'id' => Yii::$app->user->id]);
+        $model = Usuarios::findOne(['id' => $id]);
+        if ($model !== null) {
+            $password = Yii::$app->security->unmaskToken($password);
+            $model->password = Yii::$app->security->generatePasswordHash($password);
+            $model->save();
+            Yii::$app->session->setFlash('success', 'Cambio de contraseña hecho.');
+            return $this->redirect(['usuarios/view', 'id' => $id]);
         }
     }
 
