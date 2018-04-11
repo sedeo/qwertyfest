@@ -225,7 +225,7 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
             } else {
                 if ($this->scenario === self::ESCENARIO_UPDATE) {
                     if ($this->password !== '') {
-                        self::emailPassword($this->id, Yii::$app->security->maskToken($this->password));
+                        self::emailPassword($this->id, Yii::$app->security->generatePasswordHash($this->password));
                         $this->password = $this->getOldAttribute('password');
                     }
                 }

@@ -62,8 +62,7 @@ class UsuariosController extends Controller
     {
         $model = Usuarios::findOne(['id' => $id]);
         if ($model !== null) {
-            $password = Yii::$app->security->unmaskToken($password);
-            $model->password = Yii::$app->security->generatePasswordHash($password);
+            $model->password = $password;
             $model->save();
             Yii::$app->session->setFlash('success', 'Cambio de contraseña hecho.');
             return $this->redirect(['usuarios/view', 'id' => $id]);
