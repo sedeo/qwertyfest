@@ -49,8 +49,8 @@ use kartik\date\DatePicker;
 
         <?php $formPass = ActiveForm::begin(); ?>
 
-        <?= $form->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
-        <?= $form->field($model, 'conf_pass')->passwordInput(['maxlength' => true]) ?>
+        <?= $formPass->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
+        <?= $formPass->field($model, 'conf_pass')->passwordInput(['maxlength' => true]) ?>
 
         <div class="form-group">
             <?= Html::submitButton('Cambiar contraseña', ['class' => 'btn btn-success']) ?>

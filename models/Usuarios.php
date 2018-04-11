@@ -132,15 +132,33 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
         return $this->hasMany(Salas::className(), ['propietario' => 'id'])->inverseOf('propietario0');
     }
 
-    public function email()
+    public function emailVerificar()
     {
         $resultado = Yii::$app->mailer->compose()
             ->setFrom(Yii::$app->params['adminEmail'])
             ->setTo($this->email)
             ->setSubject('Validación de tu cuenta de email')
-            ->setHtmlBody(Html::a('Haga click aqui para verificar su cuenta', Url::to(['usuarios/verificar', 'token_val' => $this->token_val], true)))
+            ->setHtmlBody(Html::a('Haga click aqui para verificar', Url::to(['usuarios/verificar', 'token_val' => $this->token_val], true)))
             ->send();
         Yii::$app->session->setFlash('info', 'Se le ha enviado un correo de verificación');
+    }
+
+    public function emailPassword($id, $password)
+    {
+        $resultado = Yii::$app->mailer->compose()
+            ->setFrom(Yii::$app->params['adminEmail'])
+            ->setTo($this->email)
+            ->setSubject('Validación de cambio de contraseña')
+            ->setHtmlBody(Html::a(
+                'Haga click aqui para hacer efectivo el cambio de contraseña',
+                Url::to([
+                    'usuarios/cambiar-password',
+                    'id' => $id,
+                    'password' => $password,
+                ], true)
+            ))
+            ->send();
+        Yii::$app->session->setFlash('info', 'Se le ha enviado un correo de confirmación.');
     }
 
     /**
@@ -206,10 +224,9 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
                 }
             } else {
                 if ($this->scenario === self::ESCENARIO_UPDATE) {
-                    if ($this->password === '') {
+                    if ($this->password !== '') {
+                        self::emailPassword($this->id, Yii::$app->security->generatePasswordHash($this->password));
                         $this->password = $this->getOldAttribute('password');
-                    } else {
-                        $this->password = Yii::$app->security->generatePasswordHash($this->password);
                     }
                 }
             }

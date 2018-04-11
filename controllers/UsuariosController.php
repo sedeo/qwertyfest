@@ -58,6 +58,17 @@ class UsuariosController extends Controller
         return $this->redirect(['site/login']);
     }
 
+    public function actionCambiarPassword($id, $password)
+    {
+        $model = Usuarios::findOne(['id' => $id]);
+        if ($model !== null) {
+            $model->password = $password;
+            $model->save();
+            Yii::$app->session->setFlash('success', 'Cambio de contraseña hecho.');
+            return $this->redirect(['usuarios/view', 'id' => $id]);
+        }
+    }
+
     /**
      * Displays a single Usuarios model.
      * @param int $id
@@ -86,7 +97,7 @@ class UsuariosController extends Controller
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $model->email();
+            $model->emailVerificar();
             return $this->goHome();
         }
 
