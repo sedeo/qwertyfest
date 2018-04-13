@@ -12,25 +12,27 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="salas-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Salas', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear sala de chat', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'propietario',
-            'n_max',
+            'propietario.nombre',
             'descripcion',
-            'usuarios',
-            //'created_at',
+            'created_at',
+
+            [
+                'label' => 'Nº Usuarios',
+                'attribute' => 'n_usuarios',
+                'value' => function ($data) {
+                    return $data->usuarios . '/' . $data->n_max;
+                },
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

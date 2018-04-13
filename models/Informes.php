@@ -37,7 +37,7 @@ class Informes extends \yii\db\ActiveRecord
         return [
             [['id_recibe', 'id_envia'], 'default', 'value' => null],
             [['id_recibe', 'id_envia'], 'integer'],
-            [['motivo', 'created_at'], 'required'],
+            [['motivo'], 'required'],
             [['created_at'], 'safe'],
             [['motivo', 'descripcion'], 'string', 'max' => 255],
             [['id_recibe'], 'exist', 'skipOnError' => true, 'targetClass' => Usuarios::className(), 'targetAttribute' => ['id_recibe' => 'id']],
