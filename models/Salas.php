@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\db\Expression;
@@ -10,13 +11,13 @@ use yii\db\Expression;
  * This is the model class for table "salas".
  *
  * @property int $id
- * @property int $propietario
+ * @property int $propietario_id
  * @property string $n_max
  * @property string $descripcion
  * @property string $usuarios
  * @property string $created_at
  *
- * @property Usuarios $propietario0
+ * @property Usuarios $propietario
  */
 class Salas extends \yii\db\ActiveRecord
 {
@@ -34,13 +35,13 @@ class Salas extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['propietario'], 'default', 'value' => null],
-            [['propietario'], 'integer'],
-            [['n_max', 'created_at'], 'required'],
+            [['propietario_id'], 'default', 'value' => null],
+            [['propietario_id'], 'integer'],
+            [['n_max'], 'required'],
             [['n_max', 'usuarios'], 'number'],
             [['created_at'], 'safe'],
             [['descripcion'], 'string', 'max' => 255],
-            [['propietario'], 'exist', 'skipOnError' => true, 'targetClass' => Usuarios::className(), 'targetAttribute' => ['propietario' => 'id']],
+            [['propietario_id'], 'exist', 'skipOnError' => true, 'targetClass' => Usuarios::className(), 'targetAttribute' => ['propietario_id' => 'id']],
         ];
     }
 
@@ -65,19 +66,31 @@ class Salas extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'propietario' => 'Propietario',
+            'propietario_id' => 'Propietario',
             'n_max' => 'N Max',
-            'descripcion' => 'Descripcion',
+            'descripcion' => 'Descripción',
             'usuarios' => 'Usuarios',
-            'created_at' => 'Created At',
+            'created_at' => 'Creado',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getPropietario0()
+    public function getPropietario()
     {
-        return $this->hasOne(Usuarios::className(), ['id' => 'propietario'])->inverseOf('salas');
+        return $this->hasOne(Usuarios::className(), ['id' => 'propietario_id'])->inverseOf('salas');
+    }
+
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            if ($insert) {
+                $this->propietario_id = Yii::$app->user->id;
+                $this->usuarios = 1;
+            }
+            return true;
+        }
+        return false;
     }
 }

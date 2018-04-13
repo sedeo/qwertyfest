@@ -40,6 +40,7 @@ AppAsset::register($this);
         $items[] = ['label' => 'Iniciar sesión', 'url' => ['/site/login']];
         $items[] = ['label' => 'Registrarse', 'url' => ['usuarios/create']];
     } else {
+        $items[] = ['label' => 'Salas', 'url' => ['/salas/index']];
         $items[] = ['label' => 'Buscar usuarios', 'url' => ['/usuarios/index']];
         $items[] = [
             'label' => Yii::$app->user->identity->nombre,

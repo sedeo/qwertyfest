@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'propietario') ?>
+    <?= $form->field($model, 'propietario_id') ?>
 
     <?= $form->field($model, 'n_max') ?>
 

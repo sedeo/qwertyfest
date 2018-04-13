@@ -19,18 +19,21 @@ CREATE TABLE usuarios
   , created_at  timestamp(0)    NOT NULL
 );
 
+INSERT INTO usuarios (nombre, email, password, created_at)
+    VALUES ('Sedeo', 'sedeo95@gmail.com', crypt('prueba', gen_salt('bf', 13)), current_timestamp);
+
 DROP TABLE IF EXISTS salas CASCADE;
 
 CREATE TABLE salas
 (
-    id          bigserial       PRIMARY KEY
-  , propietario bigint          REFERENCES usuarios (id)
-                                ON DELETE NO ACTION
-                                ON UPDATE CASCADE
-  , n_max       numeric(1)      NOT NULL
-  , descripcion varchar(255)
-  , usuarios    numeric(1)
-  , created_at timestamp(0)     NOT NULL
+    id              bigserial       PRIMARY KEY
+  , propietario_id  bigint          REFERENCES usuarios (id)
+                                    ON DELETE NO ACTION
+                                    ON UPDATE CASCADE
+  , n_max           numeric(1)      NOT NULL
+  , descripcion     varchar(255)
+  , usuarios        numeric(1)
+  , created_at      timestamp(0)    NOT NULL
 );
 
 DROP TABLE IF EXISTS informes CASCADE;
