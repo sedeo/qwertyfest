@@ -1,5 +1,7 @@
 <?php
 
+use yii\grid\ActionColumn;
+
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -21,11 +23,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        
         'columns' => [
             'propietario.nombre',
             'descripcion',
-            'created_at',
-
             [
                 'label' => 'Nº Usuarios',
                 'attribute' => 'n_usuarios',
@@ -33,8 +34,24 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $data->usuarios . '/' . $data->n_max;
                 },
             ],
+            'created_at:relativetime',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => ActionColumn::className(),
+                'template' => '{unirse}',
+                'buttons' => [
+                    'unirse' => function ($url, $model, $key) {
+                        return Html::a(
+                            'Unirse',
+                            [
+                                'salas/view',
+                                'id' => $model->id
+                            ],
+                            ['class' => 'btn btn-xs btn-info']
+                        );
+                    },
+                ]
+            ],
         ],
     ]); ?>
 </div>
