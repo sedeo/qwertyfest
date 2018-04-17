@@ -2,12 +2,12 @@
 
 namespace app\controllers;
 
-use Yii;
 use app\models\Informes;
 use app\models\InformesSearch;
+use Yii;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * InformesController implements the CRUD actions for Informes model.
@@ -46,7 +46,7 @@ class InformesController extends Controller
 
     /**
      * Displays a single Informes model.
-     * @param integer $id
+     * @param int $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -64,10 +64,10 @@ class InformesController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Informes();
+        $model = new Informes(['id_envia' => Yii::$app->user->id]);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['usuarios/index']);
         }
 
         return $this->render('create', [
@@ -78,7 +78,7 @@ class InformesController extends Controller
     /**
      * Updates an existing Informes model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param int $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -98,7 +98,7 @@ class InformesController extends Controller
     /**
      * Deletes an existing Informes model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param int $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -112,7 +112,7 @@ class InformesController extends Controller
     /**
      * Finds the Informes model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
+     * @param int $id
      * @return Informes the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */

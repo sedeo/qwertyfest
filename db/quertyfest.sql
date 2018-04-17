@@ -19,8 +19,9 @@ CREATE TABLE usuarios
   , created_at  timestamp(0)    NOT NULL
 );
 
-INSERT INTO usuarios (nombre, email, password, created_at)
-    VALUES ('Sedeo', 'sedeo95@gmail.com', crypt('prueba', gen_salt('bf', 13)), current_timestamp);
+INSERT INTO usuarios (nombre, email, password, admin, created_at)
+    VALUES ('Sedeo', 'sedeo95@gmail.com', crypt('prueba', gen_salt('bf', 13)), DEFAULT, current_timestamp),
+           ('admin', 'admin@admin.com', crypt('admin', gen_salt('bf', 13)), true, current_timestamp);
 
 DROP TABLE IF EXISTS salas CASCADE;
 

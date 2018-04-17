@@ -1,9 +1,15 @@
 <?php
 
+use app\models\Informes;
+
+use yii\web\View;
+
 use yii\grid\ActionColumn;
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+
+use yii\bootstrap\Modal;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\UsuariosSearch */
@@ -11,6 +17,37 @@ use yii\grid\GridView;
 
 $this->title = 'Usuarios';
 $this->params['breadcrumbs'][] = $this->title;
+$columns = ['nombre'];
+if (Yii::$app->user->identity->admin) {
+    $columns = array_merge($columns, ['id', 'email', 'direccion', 'fec_nac', 'telefono', 'admin', 'created_at']);
+}
+$columns[] = [
+    'class' => ActionColumn::className(),
+    'header' => 'Acciones',
+    'template' => '{view}{report}',
+    'buttons' => [
+        'view' => function ($url, $model, $key) {
+            return Html::a('Ver perfil', ['usuarios/view', 'id' => $model->id], ['class' => 'btn btn-xs btn-info']);
+        },
+        'report' => function ($url, $model, $key) {
+            if ($model->id !== Yii::$app->user->id){
+                return Html::button('Reportar', [
+                    'id' => $model->id,
+                    'class' => 'boton-reportar btn btn-xs btn-danger',
+                    'data-toggle' => 'modal',
+                    'data-target' => '#ventana-modal'
+                ]);
+            }
+        }
+    ]
+];
+$js = <<<EOT
+$('.boton-reportar').on('click', function(){
+    console.log($(this).attr('id'));
+    $('#informes-id_recibe').val($(this).attr('id'));
+});
+EOT;
+$this->registerJs($js, View::POS_END);
 ?>
 <div class="usuarios-index">
 
@@ -21,13 +58,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'layout' => '{items}{pager}',
-        'columns' => [
-            'nombre',
-            [
-                'class' => ActionColumn::className(),
-                'header' => 'Acciones',
-                'template' => '{view}',
-            ]
-        ],
+        'columns' => $columns,
     ]); ?>
 </div>
+
+<?php Modal::begin(['id' => 'ventana-modal', 'header' => 'Crear informe']) ?>
+    <?= $this->render('/informes/create', ['model' => new Informes()]) ?>
+<?php Modal::end() ?>
