@@ -33,7 +33,7 @@ class InformesController extends Controller
             //     'rules' => [
             //         'allow' => true,
             //         'matchCallback' => function ($rule, $action) {
-            //             return Yii::$app->user->identity->admin === true;
+            //             return Yii::$app->user->identity->admin === 1;
             //         },
             //     ],
             // ],

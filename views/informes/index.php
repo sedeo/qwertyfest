@@ -20,7 +20,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
 
-            'id',
             [
                 'attribute' => 'recibe.nombre',
                 'format' => 'text',
@@ -32,8 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Enviado por',
             ],
             'motivo',
-            'descripcion',
-            'created_at:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
