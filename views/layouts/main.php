@@ -42,6 +42,9 @@ AppAsset::register($this);
     } else {
         $items[] = ['label' => 'Salas', 'url' => ['/salas/index']];
         $items[] = ['label' => 'Buscar usuarios', 'url' => ['/usuarios/index']];
+        if (Yii::$app->user->identity->admin) {
+            $items[] = ['label' => 'Informes', 'url' => ['/informes/index']];
+        }
         $items[] = [
             'label' => Yii::$app->user->identity->nombre,
             'items' => [

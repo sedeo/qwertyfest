@@ -44,7 +44,7 @@ $columns[] = [
 $js = <<<EOT
 $('.boton-reportar').on('click', function(){
     console.log($(this).attr('id'));
-    $('#informes-id_recibe').val($(this).attr('id'));
+    $('#informes-recibe_id').val($(this).attr('id'));
 });
 EOT;
 $this->registerJs($js, View::POS_END);

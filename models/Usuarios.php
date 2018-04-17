@@ -113,7 +113,7 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public function getInformes()
     {
-        return $this->hasMany(Informes::className(), ['id_recibe' => 'id'])->inverseOf('recibe');
+        return $this->hasMany(Informes::className(), ['recibe_id' => 'id'])->inverseOf('recibe');
     }
 
     /**
@@ -121,7 +121,7 @@ class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public function getInformes0()
     {
-        return $this->hasMany(Informes::className(), ['id_envia' => 'id'])->inverseOf('envia');
+        return $this->hasMany(Informes::className(), ['envia_id' => 'id'])->inverseOf('envia');
     }
 
     /**

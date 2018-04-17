@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(['action' => Url::to(['informes/create'])]); ?>
 
-    <?= $form->field($model, 'id_recibe')->hiddenInput()->label(false) ?>
+    <?= $form->field($model, 'recibe_id')->hiddenInput()->label(false) ?>
 
     <?= $form->field($model, 'motivo')->textInput(['maxlength' => true]) ?>
 
