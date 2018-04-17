@@ -10,8 +10,8 @@ use yii\db\Expression;
  * This is the model class for table "informes".
  *
  * @property int $id
- * @property int $id_recibe
- * @property int $id_envia
+ * @property int $recibe_id
+ * @property int $envia_id
  * @property string $motivo
  * @property string $descripcion
  * @property string $created_at
@@ -35,13 +35,13 @@ class Informes extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_recibe', 'id_envia'], 'default', 'value' => null],
-            [['id_recibe', 'id_envia'], 'integer'],
+            [['recibe_id', 'envia_id'], 'default', 'value' => null],
+            [['recibe_id', 'envia_id'], 'integer'],
             [['motivo'], 'required'],
             [['created_at'], 'safe'],
             [['motivo', 'descripcion'], 'string', 'max' => 255],
-            [['id_recibe'], 'exist', 'skipOnError' => true, 'targetClass' => Usuarios::className(), 'targetAttribute' => ['id_recibe' => 'id']],
-            [['id_envia'], 'exist', 'skipOnError' => true, 'targetClass' => Usuarios::className(), 'targetAttribute' => ['id_envia' => 'id']],
+            [['recibe_id'], 'exist', 'skipOnError' => true, 'targetClass' => Usuarios::className(), 'targetAttribute' => ['recibe_id' => 'id']],
+            [['envia_id'], 'exist', 'skipOnError' => true, 'targetClass' => Usuarios::className(), 'targetAttribute' => ['envia_id' => 'id']],
         ];
     }
 
@@ -66,11 +66,11 @@ class Informes extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_recibe' => 'Id Recibe',
-            'id_envia' => 'Id Envia',
+            'recibe_id' => 'Enviado a',
+            'envia_id' => 'Enviado por',
             'motivo' => 'Motivo',
-            'descripcion' => 'Descripcion',
-            'created_at' => 'Created At',
+            'descripcion' => 'Descripción',
+            'created_at' => 'Fecha de creación',
         ];
     }
 
@@ -79,7 +79,7 @@ class Informes extends \yii\db\ActiveRecord
      */
     public function getRecibe()
     {
-        return $this->hasOne(Usuarios::className(), ['id' => 'id_recibe'])->inverseOf('informes');
+        return $this->hasOne(Usuarios::className(), ['id' => 'recibe_id'])->inverseOf('informes');
     }
 
     /**
@@ -87,6 +87,6 @@ class Informes extends \yii\db\ActiveRecord
      */
     public function getEnvia()
     {
-        return $this->hasOne(Usuarios::className(), ['id' => 'id_envia'])->inverseOf('informes0');
+        return $this->hasOne(Usuarios::className(), ['id' => 'envia_id'])->inverseOf('informes0');
     }
 }

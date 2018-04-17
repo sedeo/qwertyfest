@@ -42,10 +42,10 @@ DROP TABLE IF EXISTS informes CASCADE;
 CREATE TABLE informes
 (
     id          bigserial       PRIMARY KEY
-  , id_recibe   bigint          REFERENCES usuarios (id)
+  , recibe_id   bigint          REFERENCES usuarios (id)
                                 ON DELETE NO ACTION
                                 ON UPDATE CASCADE
-  , id_envia    bigint          REFERENCES usuarios (id)
+  , envia_id    bigint          REFERENCES usuarios (id)
                                 ON DELETE NO ACTION
                                 ON UPDATE CASCADE
   , motivo      varchar(255)    NOT NULL

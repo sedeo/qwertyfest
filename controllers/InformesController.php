@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Informes;
 use app\models\InformesSearch;
+use app\models\Usuarios;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
@@ -26,6 +27,16 @@ class InformesController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            // 'access' => [
+            //     'class' => \yii\filters\AccessControl::className(),
+            //     'only' => ['view', 'index', 'update'],
+            //     'rules' => [
+            //         'allow' => true,
+            //         'matchCallback' => function ($rule, $action) {
+            //             return Yii::$app->user->identity->admin === true;
+            //         },
+            //     ],
+            // ],
         ];
     }
 
@@ -64,7 +75,7 @@ class InformesController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Informes(['id_envia' => Yii::$app->user->id]);
+        $model = new Informes(['envia_id' => Yii::$app->user->id]);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['usuarios/index']);

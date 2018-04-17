@@ -2,10 +2,8 @@
 
 namespace app\models;
 
-use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Informes;
 
 /**
  * InformesSearch represents the model behind the search form of `app\models\Informes`.
@@ -18,8 +16,8 @@ class InformesSearch extends Informes
     public function rules()
     {
         return [
-            [['id', 'id_recibe', 'id_envia'], 'integer'],
-            [['motivo', 'descripcion', 'created_at'], 'safe'],
+            [['id', 'recibe_id', 'envia_id'], 'integer'],
+            [['motivo', 'descripcion', 'created_at', 'recibe.nombre', 'envia.nombre'], 'safe'],
         ];
     }
 
@@ -32,8 +30,13 @@ class InformesSearch extends Informes
         return Model::scenarios();
     }
 
+    public function attributes()
+    {
+        return array_merge(parent::attributes(), ['recibe.nombre', 'envia.nombre']);
+    }
+
     /**
-     * Creates data provider instance with search query applied
+     * Creates data provider instance with search query applied.
      *
      * @param array $params
      *
@@ -41,7 +44,7 @@ class InformesSearch extends Informes
      */
     public function search($params)
     {
-        $query = Informes::find();
+        $query = Informes::find()->joinWith(['recibe']); // Por revisar
 
         // add conditions that should always apply here
 
@@ -57,16 +60,28 @@ class InformesSearch extends Informes
             return $dataProvider;
         }
 
+        $dataProvider->sort->attributes['recibe.nombre'] = [
+            'asc' => ['usuarios.nombre' => SORT_ASC],
+            'desc' => ['usuarios.nombre' => SORT_DESC],
+        ];
+
+        $dataProvider->sort->attributes['envia.nombre'] = [
+            'asc' => ['usuarios.nombre' => SORT_ASC],
+            'desc' => ['usuarios.nombre' => SORT_DESC],
+        ];
+
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'id_recibe' => $this->id_recibe,
-            'id_envia' => $this->id_envia,
+            'recibe_id' => $this->recibe_id,
+            'envia_id' => $this->envia_id,
             'created_at' => $this->created_at,
         ]);
 
         $query->andFilterWhere(['ilike', 'motivo', $this->motivo])
-            ->andFilterWhere(['ilike', 'descripcion', $this->descripcion]);
+            ->andFilterWhere(['ilike', 'descripcion', $this->descripcion])
+            ->andFilterWhere(['ilike', 'usuarios.nombre', $this->getAttribute('recibe.nombre')])
+            ->andFilterWhere(['ilike', 'usuarios.nombre', $this->getAttribute('envia.nombre')]);
 
         return $dataProvider;
     }
