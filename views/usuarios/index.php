@@ -19,7 +19,7 @@ $this->title = 'Usuarios';
 $this->params['breadcrumbs'][] = $this->title;
 $columns = ['nombre'];
 if (Yii::$app->user->identity->admin) {
-    $columns = array_merge($columns, ['id', 'email', 'direccion', 'fec_nac', 'telefono', 'admin', 'created_at']);
+    $columns = array_merge($columns, ['email', 'direccion', 'fec_nac', 'telefono', 'admin', 'created_at:datetime']);
 }
 $columns[] = [
     'class' => ActionColumn::className(),
